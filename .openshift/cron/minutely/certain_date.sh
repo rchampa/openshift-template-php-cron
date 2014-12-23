@@ -4,8 +4,10 @@ HOUR=`date +%H`
 MINUTE=`date +%M`
 
 
-if [ "$DATE" == "12/21/14" -a "$HOUR" == "18" -a "$MINUTE" == "03" ];then
+if [ "$DATE" == "12/23/14" -a "$HOUR" == "14" -a "$MINUTE" == "51" ];then
 	(
-            date >> $CUSTOM_REPO_DIR/certain_date.txt
-        )
+        #date >> $CUSTOM_REPO_DIR/certain_date.txt
+        cd $CUSTOM_REPO_DIR ; 
+        $CUSTOM_PHP cron_certain_date.php
+    )
 fi
